@@ -18,6 +18,22 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (id_foodtruck,nom_FT, tel,email, site,profil,image, mdp_FT);
 
+CREATE USER 'gestionnaire'@'localhost';
+GRANT ALL on toutrecommencer to 'gestionnaire'@'localhost';
+
+CREATE USER 'lecteur'@'localhost';
+GRANT  SELECT on * to 'lecteur'@'localhost';
+
+CREATE USER 'basique'@'localhost';
+GRANT ALL on adresse to 'basique'@'localhost';
+REVOKE DELETE on adresse FROM 'basique'@'localhost';
+
+SELECT user FROM mysql.user;
+
+DROP USER 'lecteur'@'localhost';
+
+SELECT user FROM mysql.user;
+
 
 
 
