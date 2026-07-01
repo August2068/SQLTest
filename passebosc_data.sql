@@ -97,3 +97,4 @@ LINES TERMINATED BY '\n'
 IGNORE 1 ROWS
 (id_categorie,nom_cat);
 
+UPDATE foodTruck SET fk_categorie = 5000 WHERE id_foodTruck = 5000;
